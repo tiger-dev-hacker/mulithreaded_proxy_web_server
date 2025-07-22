@@ -1,7 +1,7 @@
-CC=gcc
-CFLAGS -g -Wall
+CC=g++
+CFLAGS= -g -Wall 
 
-all:proxy
+all: proxy
 
 proxy: proxy_server_with_cache.c
 	$(CC) $(CFLAGS) -o proxy_parse.o -c proxy_parse.c -lpthread
@@ -11,5 +11,5 @@ proxy: proxy_server_with_cache.c
 clean:
 	rm -f proxy *.o
 
-#tar:
-	#tar -cvzf ass1.tgz proxy_server_with_cache.c README Makefile proxy_parse.c proxy_parse.h
+tar:
+	tar -cvzf ass1.tgz proxy_server_with_cache.c README Makefile proxy_parse.c proxy_parse.h
